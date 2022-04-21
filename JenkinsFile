@@ -6,14 +6,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // sh 'npm install'
                 echo 'Build stage'
+                bat 'npm install'                
             }
         }
         stage('Test') {
                     steps {
-                        // sh './jenkins/scripts/test.sh'
                         echo 'Test stage'
+                        bat 'npm test'
                     }
                 }
         stage('Deliver') {
