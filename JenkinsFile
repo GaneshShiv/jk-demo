@@ -1,4 +1,8 @@
 pipeline {
+    angent any
+
+    tools {nodejs "node"}
+    
     stages {
         stage('Build') {
             steps {
