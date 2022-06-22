@@ -7,13 +7,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Build stage'
-                bat 'npm install'                
+                npm install              
             }
         }
         stage('Test') {
                     steps {
                         echo 'Test stage'
-                        bat 'npm test'
+                        npm test
                     }
                 }
         stage('Deliver') {
